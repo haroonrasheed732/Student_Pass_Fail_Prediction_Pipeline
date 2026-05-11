@@ -78,37 +78,5 @@ It includes:
 
 This project can be further improved by deploying it using Flask, Streamlit, or Django.
 =======
-# Student Pass/Fail Prediction Pipeline
 
-This repository contains a machine learning pipeline for predicting student pass/fail outcomes based on academic and demographic data.
 
-## Project Contents
-
-- `Student_Pass_Fail_Prediction_Pipeline.ipynb` - Jupyter notebook with data loading, preprocessing, model training, evaluation, and predictions.
-- `studentbinaryclass.csv` - Dataset used for model training and analysis.
-- `student_pass_fail_pipeline.pkl` - Serialized trained model pipeline.
-
-## Summary
-
-This project demonstrates a binary classification workflow for student performance. It includes:
-
-- data preparation and feature engineering
-- model training and validation
-- performance evaluation
-- model serialization for reuse
-
-## How to Use
-
-1. Open the notebook in Jupyter or VS Code.
-2. Run the notebook cells to reproduce the training and evaluation steps.
-3. Use the saved pipeline `student_pass_fail_pipeline.pkl` to make predictions on new data.
-
-## Notes
-
-- The checkpoint files under `.ipynb_checkpoints/` are excluded from version control.
-- Keep the dataset file and model artifact in the repository if you want to reproduce the notebook results locally.
-
-## Repository
-
-Remote repository: https://github.com/haroonrasheed732/Student_Pass_Fail_Prediction_Pipeline
->>>>>>> af00903 (Add README and .gitignore; remove notebook checkpoint files from tracking)
