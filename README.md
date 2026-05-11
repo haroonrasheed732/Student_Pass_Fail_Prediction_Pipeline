@@ -1,201 +1,52 @@
-# Student Pass/Fail Prediction Using Machine Learning Pipeline
+# Student Pass/Fail Prediction Pipeline
 
-## Project Overview
-This project builds a complete **Machine Learning Pipeline** to predict whether a student will **Pass** or **Fail** based on academic performance data.
+A machine learning pipeline for predicting whether a student will pass or fail based on academic and attendance data.
 
-Target Variable:
-- **1 = Pass**
-- **0 = Fail**
+## Repository Contents
 
-This is a **Binary Classification Problem**.
+- `Student_Pass_Fail_Prediction_Pipeline.ipynb` - Notebook with data loading, preprocessing, model training, evaluation, and prediction examples.
+- `studentbinaryclass.csv` - Dataset used for training and evaluation.
+- `student_pass_fail_pipeline.pkl` - Serialized trained model pipeline.
+- `.gitignore` - Excludes unnecessary files such as notebook checkpoints.
 
----
+## Overview
 
-## Dataset Features
+This project demonstrates a complete binary classification workflow using student performance data.
+It includes data cleaning, feature engineering, model training, evaluation, and saving a reusable model pipeline.
 
-The dataset contains the following columns:
-
-- Student_ID
-- Student_Name
-- Study_Hours_Per_Day
-- Attendance_%
-- Previous_GPA
-- Assignments_Submitted
-- Sleep_Hours
-- Final_Marks (Target Variable)
-
----
-
-## Project Objectives
-
-This project includes:
+## Key Features
 
 - Exploratory Data Analysis (EDA)
-- Missing Value Handling
-- Duplicate Removal
-- Data Type Fixing
-- Feature Engineering
-- Feature Transformation
-- Feature Scaling
-- Column Transformer
-- Machine Learning Pipeline
-- Model Evaluation
-- Model Saving
-- Prediction Function
-
----
-
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-Learn
-- Joblib
-
----
-
-# Project Workflow
-
-## 1. Data Loading
-Load dataset using Pandas.
-
-```python
-df = pd.read_csv("studentbinaryclass.csv")
-```
-
----
-
-## 2. Exploratory Data Analysis (EDA)
-
-Performed:
-
-- Dataset shape
-- Column analysis
-- Data types
-- Missing values
-- Duplicate values
-- Statistical summary
-- Target variable distribution
-- Correlation heatmap
-
----
-
-## 3. Data Cleaning
-
-Removed unnecessary columns:
-
-- Unnamed: 0
-- Student_ID
-- Student_Name
-
-Converted columns into numeric format:
-
-- Assignments_Submitted
-- Sleep_Hours
-
----
-
-## 4. Feature Engineering
-
-Separated:
-
-- Features (X)
-- Target (y)
-
----
-
-## 5. Preprocessing Pipeline
-
-### Numerical Pipeline
 - Missing value handling
-- Power transformation
-- Standard scaling
+- Data cleaning and feature engineering
+- Preprocessing pipeline with numerical and categorical transformers
+- Model training and evaluation
+- Model saving with joblib
 
-### Categorical Pipeline
-- Missing value handling
-- One-hot encoding
+## Files Included
 
----
+- `Student_Pass_Fail_Prediction_Pipeline.ipynb`
+- `studentbinaryclass.csv`
+- `student_pass_fail_pipeline.pkl`
+- `README.md`
+- `.gitignore`
 
-## 6. Column Transformer
+## How to Use
 
-Used to combine numerical and categorical pipelines.
+1. Open and run the notebook in Jupyter or VS Code.
+2. Follow each section to load data, clean it, build the pipeline, and evaluate the model.
+3. Use the saved model file to make predictions on new student data.
 
-```python
-ColumnTransformer()
-```
+## Notes
 
----
+- Checkpoint files under `.ipynb_checkpoints/` are intentionally excluded from version control.
+- The notebook contains the full pipeline and model workflow.
+- Keep the dataset and model artifact if you want to reproduce the results locally.
 
-## 7. Machine Learning Models
+## Remote Repository
 
-The following models were trained:
+https://github.com/haroonrasheed732/Student_Pass_Fail_Prediction_Pipeline
 
-- Logistic Regression
-- Random Forest
-- Support Vector Machine (SVM)
-- K-Nearest Neighbors (KNN)
-
----
-
-## 8. Model Evaluation
-
-Evaluation metrics used:
-
-- Accuracy Score
-- Classification Report
-- Confusion Matrix
-
----
-
-## 9. Best Model Selection
-
-The model with highest accuracy was selected as final model.
-
----
-
-## 10. Model Saving
-
-```python
-joblib.dump(best_model, "student_pass_fail_pipeline.pkl")
-```
-
----
-
-## 11. Prediction Function
-
-A user input function was created where users enter:
-
-- Study Hours
-- Attendance
-- Previous GPA
-- Assignments Submitted
-- Sleep Hours
-
-The system predicts:
-
-- Pass ✅
-- Fail ❌
-
----
-
-# Project Structure
-
-```bash
-student-project/
-│
-├── studentbinaryclass.csv
-├── student_pipeline.ipynb
-├── student_pass_fail_pipeline.pkl
-├── README.md
-```
-
----
-
-# Example Prediction
 
 ### Input:
 - Study Hours: 6
@@ -226,3 +77,38 @@ It includes:
 ✔ Prediction System  
 
 This project can be further improved by deploying it using Flask, Streamlit, or Django.
+=======
+# Student Pass/Fail Prediction Pipeline
+
+This repository contains a machine learning pipeline for predicting student pass/fail outcomes based on academic and demographic data.
+
+## Project Contents
+
+- `Student_Pass_Fail_Prediction_Pipeline.ipynb` - Jupyter notebook with data loading, preprocessing, model training, evaluation, and predictions.
+- `studentbinaryclass.csv` - Dataset used for model training and analysis.
+- `student_pass_fail_pipeline.pkl` - Serialized trained model pipeline.
+
+## Summary
+
+This project demonstrates a binary classification workflow for student performance. It includes:
+
+- data preparation and feature engineering
+- model training and validation
+- performance evaluation
+- model serialization for reuse
+
+## How to Use
+
+1. Open the notebook in Jupyter or VS Code.
+2. Run the notebook cells to reproduce the training and evaluation steps.
+3. Use the saved pipeline `student_pass_fail_pipeline.pkl` to make predictions on new data.
+
+## Notes
+
+- The checkpoint files under `.ipynb_checkpoints/` are excluded from version control.
+- Keep the dataset file and model artifact in the repository if you want to reproduce the notebook results locally.
+
+## Repository
+
+Remote repository: https://github.com/haroonrasheed732/Student_Pass_Fail_Prediction_Pipeline
+>>>>>>> af00903 (Add README and .gitignore; remove notebook checkpoint files from tracking)
